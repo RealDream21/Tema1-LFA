@@ -7,6 +7,7 @@ class Node{
     int nextArrSize;
 public:
     Node(const int, const int);
+    Node();
     ~Node();
     void addVertex(const std::string, const int);
     void showVertexes()const;

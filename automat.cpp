@@ -9,16 +9,20 @@ Node::Node(const int NODES_SIZE, const int id){
     cout << "Created new node\n";
 }
 
+Node::Node(){
+    //cout << "Created node array item\n";
+}
+
 void Node::setInit(const int NODES_SIZE, const int id){
     next = new vector<string>[NODES_SIZE];
     identifier = id;
     nextArrSize = NODES_SIZE;
-    cout << "Set new node\n";
+    //cout << "Set new node\n";
 }
 
 Node::~Node(){
     delete [] next;
-    cout << "Deleted node\n";
+    //cout << "Deleted node\n";
 }
 
 void Node::addVertex(const string vertexName, const int to){
