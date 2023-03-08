@@ -8,6 +8,9 @@ class Node{
 public:
     Node(const int, const int);
     ~Node();
-    void addNode(std::string, int);
+    void addVertex(const std::string, const int);
     void showVertexes()const;
+    bool hasVertex(const Node&)const;
+    void setInit(const int, const int);
+    /*Node& nextNode(const string)const;*/
 };
