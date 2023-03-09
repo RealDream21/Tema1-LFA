@@ -1,19 +1,29 @@
 #include "automat.h"
 #include <iostream>
+#include <fstream>
 using namespace std;
 
-const int MAX_NODES = 100;
+//MAYBE USE EXTERN CONST INT ???
 
+extern const int MAX_NODES = 100;
 
 int main()
 {
-    Node automat[100];
-    for(int i = 0; i < MAX_NODES; i++){
-        automat[i].setInit(MAX_NODES, i);
+    int n = MAX_NODES;
+    Node curentNode;
+    Node automat[MAX_NODES];
+    for(int i = 0; i < n; i++){
+        automat[i].setInit(i);
     }
-    automat[0].addVertex("a", 10);
-    automat[10].addVertex("a", 0);
-    cout << automat[5].hasVertex(automat[0]);
+    string cuvant;
+    cout << "Cuvant spre validare: ";
+    cin >> cuvant;
+
+    curentNode = automat[0];
+
+
+
+
 
     return 0;
 }
