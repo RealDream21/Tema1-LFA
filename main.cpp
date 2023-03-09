@@ -2,18 +2,22 @@
 #include <iostream>
 using namespace std;
 
-const int MAX_NODES = 100;
+//MAYBE USE EXTERN CONST INT ???
 
+extern const int MAX_NODES = 100;
 
 int main()
 {
-    Node automat[100];
-    for(int i = 0; i < MAX_NODES; i++){
-        automat[i].setInit(MAX_NODES, i);
+    int n = MAX_NODES;
+    Node curentNode;
+    Node automat[MAX_NODES];
+    for(int i = 0; i < n; i++){
+        automat[i].setInit(i);
     }
-    automat[0].addVertex("a", 10);
-    automat[10].addVertex("a", 0);
-    cout << automat[5].hasVertex(automat[0]);
+    automat[1].addVertex("a", 11);
+    automat[1].addVertex("b", 11);
+
+
 
     return 0;
 }
