@@ -15,6 +15,7 @@ int main()
     for(int i = 0; i < n; i++){
         automat[i].setInit(i);
     }
+<<<<<<< HEAD
     string cuvant;
     cout << "Cuvant spre validare: ";
     cin >> cuvant;
@@ -22,6 +23,10 @@ int main()
     curentNode = automat[0];
 
 
+=======
+    automat[1].addVertex("a", 11);
+    automat[1].addVertex("b", 11);
+>>>>>>> main
 
 
 
