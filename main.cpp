@@ -24,7 +24,7 @@ int main()
     for(int i = 0; i < nr_noduri_finale; i++){
         cout << f[i];
     }*/
-    activeNode curentNode = id_nod_initial;
+    //activeNode curentNode = id_nod_initial;
     Node automat[nr_noduri];
     for(int i = 0; i < nr_noduri; i++)
         automat[i].setInit(i);
@@ -42,15 +42,34 @@ int main()
     fin.close();
 
     ifstream fin1("cuvinte_input.txt");
-    while (fin1 >> p)
-    {
-        cout << p << endl;
+    while (fin1 >> p){
+        vector<int> drum;
+        int id_active_node = id_nod_initial;
+        bool is_accepted = false;
+        int i = 0;
+        while(i < strlen(p)){
+            string aux;
+            aux.push_back(p[i]);
+            if(automat[id_active_node].hasVertexNamed(aux)) {
+                i++;
+                id_active_node = (automat[id_active_node].nextNode(aux, automat)).getIdentifier();
+                drum.push_back(id_active_node);
+            }
+            else break;
+        }
+        if(i == strlen(p)){
+            for(int j = 0; j < nr_noduri_finale; j++){
+                if(id_active_node == f[j]) is_accepted = true;
+            }
+        }
+        if(is_accepted == true) {
+            cout << "ACCEPTAT: ";
+            for(int j = 0; j < drum.size(); j++)
+                cout << drum[j] << " ";
+            cout << endl;
+        }
+        else cout <<"NU A FOST ACCEPTAT\n";
     }
-
-
-
-
-
     return 0;
 }
 

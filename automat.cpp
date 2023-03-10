@@ -32,6 +32,18 @@ void Node::addVertex(const string vertexName, const int to){
     return;
 }
 
+int Node::getIdentifier()const{return identifier;}
+
+Node& Node::nextNode(const string transition, Node* automat)const{
+    for(int i = 0; i < MAX_NODES; i++){
+        for(int j = 0; j < next[i].size(); j++)
+        {
+            if(next[i][j] == transition)
+                return automat[i];
+        }
+    }
+}
+
 void Node::showVertexes() const{
     //debugging for showing all vertexes
     for(int i = 0; i < MAX_NODES; i++){
@@ -46,10 +58,18 @@ bool Node::hasVertex(const Node& other) const{
     else return 0;
 }
 
+bool Node::hasVertexNamed(const string s)const{
+    for(int i = 0; i < MAX_NODES; i++)
+        for(int j = 0; j < next[i].size(); j++)
+            if(next[i][j] == s) return true;
+    return false;
+}
+
 Node& Node::operator=(const Node& other){
     identifier = other.identifier;
-    delete [] next;
-    next = other.next;
+    for(int i = 0; i < MAX_NODES; i++)
+        for(int j = 0; j < next[i].size(); j++)
+            next[i][j] = other.next[i][j];
     cout << "Copied node\n";
     return *this;
 }
@@ -61,7 +81,5 @@ activeNode::activeNode(const int a){
 /*
 Node& Node::nextNode(const string letter) const{
     *this.hasVertex(letter) ? return
-
-
 }*/
 
