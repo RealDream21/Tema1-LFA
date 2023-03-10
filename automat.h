@@ -15,3 +15,9 @@ public:
     Node& operator=(const Node&);
     /*Node& nextNode(const string)const;*/
 };
+
+struct activeNode{
+    int id;
+    std::vector <int> road;
+    activeNode(int);
+};

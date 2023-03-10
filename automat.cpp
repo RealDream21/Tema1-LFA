@@ -54,6 +54,10 @@ Node& Node::operator=(const Node& other){
     return *this;
 }
 
+activeNode::activeNode(const int a){
+    id = a;
+}
+
 /*
 Node& Node::nextNode(const string letter) const{
     *this.hasVertex(letter) ? return
