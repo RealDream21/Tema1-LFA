@@ -10,3 +10,8 @@ bbabbabba
 abbabba
 ababababababaaaaaba
 bbbbbbaaaaabbbabbaaaaaaab
+
+#nr_noduri #nod_initial #nr_noduri_finale
+#nodfinal1 #nodfinal2 #nodfinal3
+#nod0: ch_tranzitie1 nod1 ch_tranzitie2 nod2
+#nod1: ch_tranzitie1 nod1 ch_tranzitie2 nod2
