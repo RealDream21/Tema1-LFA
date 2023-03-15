@@ -1,0 +1,17 @@
+5 0 1
+4
+2 a 1 b 0
+2 b 2 a 1
+2 b 3 a 1
+2 a 4 b 1
+2 a 4 b 4
+
+bbabbabba
+abbabba
+ababababababaaaaaba
+bbbbbbaaaaabbbabbaaaaaaab
+
+#nr_noduri #nod_initial #nr_noduri_finale
+#nodfinal1 #nodfinal2 #nodfinal3
+#nod0: ch_tranzitie1 nod1 ch_tranzitie2 nod2
+#nod1: ch_tranzitie1 nod1 ch_tranzitie2 nod2
