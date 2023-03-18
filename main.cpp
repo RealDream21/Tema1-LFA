@@ -1,10 +1,7 @@
 #include "automat.h"
 #include <iostream>
 #include <fstream>
-<<<<<<< HEAD
-=======
 #include <cstring>
->>>>>>> main
 using namespace std;
 
 //MAYBE USE EXTERN CONST INT ???
@@ -42,20 +39,6 @@ int main()
             automat[i].addVertex(p, str_to_int(q));
         }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    string cuvant;
-    cout << "Cuvant spre validare: ";
-    cin >> cuvant;
-
-    curentNode = automat[0];
-
-
-=======
-    automat[1].addVertex("a", 11);
-    automat[1].addVertex("b", 11);
->>>>>>> main
-=======
     fin.close();
 
     ifstream fin1("cuvinte_input.txt");
@@ -89,7 +72,6 @@ int main()
     }
     return 0;
 }
->>>>>>> main
 
 int str_to_int(char *p)
 {

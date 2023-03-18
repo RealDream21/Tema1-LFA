@@ -1,3 +1,4 @@
-110001010
-110101002
-10101010
+bababb
+bab
+babac
+bababababbaba
